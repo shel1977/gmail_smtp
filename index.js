@@ -40,6 +40,8 @@ app.post('/sendMessage', async function (req, res) {
     res.send('ok');
 });
 
-app.listen(3010, function () {
+let port = process.env.PORT || 3010;
+
+app.listen(port, function () {
     console.log('Example app listening on port 3010!');
 });
