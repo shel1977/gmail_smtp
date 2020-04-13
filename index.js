@@ -5,8 +5,7 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors({
-    origin: ['https://shel1977.github.io/portfolio']}));
+app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -39,6 +38,7 @@ app.post('/sendMessage', async function (req, res) {
                 <div>message: ${message}</div>`  // html body
     });
     res.send('ok');
+    console.log("Message sent: %s", info.messageId);
 });
 
 let port = process.env.PORT || 3010;
