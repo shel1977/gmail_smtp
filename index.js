@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-    origin: ['https://shel1977.github.io/portfolio/']}));
+    origin: ['https://shel1977.github.io/portfolio']}));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
